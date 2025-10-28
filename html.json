@@ -1,0 +1,23 @@
+{
+  "HTML Hello Lab": {
+    "prefix": "htmlbase",
+    "body": [
+      "<!-- ${1:Minseo}, ${2:KIM}, ${3:1} -->",
+      "<!DOCTYPE html>",
+      "<html lang=\"lt\">",
+      "<head>",
+      "    <meta charset=\"UTF-8\">",
+      "    <meta http-equiv=\"Content-Language\" content=\"lt\">",
+      "    <title>lab</title>",
+      "</head>",
+      "<body>",
+      "    <h1><b>Hello</b></h1>",
+      "    <h2><i>professor</i></h2>",
+      "    <h3><u>bye</u><h3>",
+      "    $0",
+      "</body>",
+      "</html>"
+    ],
+    "description": "Using html form and tags"
+  }
+}
