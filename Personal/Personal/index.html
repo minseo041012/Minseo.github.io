@@ -1,12 +1,13 @@
 <!DOCTYPE html>
+<!-- Created by Minseo KIM -->
 <html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Index - Personal Bootstrap Template</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <title>My Personal Website</title>
+  <meta name="description" content="Personal website created using Bootstrap template.">
+  <meta name="keywords" content="portfolio, resume, personal, website">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -15,7 +16,7 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Poppins:wght@300;500;700&family=Raleway:wght@300;500;700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -38,39 +39,20 @@
 
 <body class="index-page">
 
+  <!-- ======= Header ======= -->
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.webp" alt=""> -->
+      <a href="#hero" class="logo d-flex align-items-center">
         <h1 class="sitename">Personal</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -78,17 +60,16 @@
 
     </div>
   </header>
+  <!-- End Header -->
 
   <main class="main">
 
-    <!-- Hero Section -->
+    <!-- ======= Hero Section ======= -->
     <section id="hero" class="hero section dark-background">
-
-      <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in">
-
+      <img src="assets/img/hero-bg.jpg" alt="Background hero image" data-aos="fade-in">
       <div class="container" data-aos="zoom-out" data-aos-delay="100">
-        <h2>Emily Jones</h2>
-        <p>I'm <span class="typed" data-typed-items="Designer, Developer, Freelancer, Photographer"></span><span class="typed-cursor typed-cursor--blink"></span></p>
+        <h2>Minseo KIM</h2>
+        <p>I'm <span class="typed" data-typed-items="Developer, Designer, Engineer, Student"></span><span class="typed-cursor typed-cursor--blink"></span></p>
         <div class="social-links">
           <a href="#"><i class="bi bi-twitter-x"></i></a>
           <a href="#"><i class="bi bi-facebook"></i></a>
@@ -96,39 +77,193 @@
           <a href="#"><i class="bi bi-linkedin"></i></a>
         </div>
       </div>
+    </section>
+    <!-- End Hero Section -->
 
-    </section><!-- /Hero Section -->
+    <!-- ======= About Section ======= -->
+    <section id="about" class="section">
+      <div class="container" data-aos="fade-up">
+        <div class="row gy-4">
+          <div class="col-lg-4">
+            <img src="assets/img/profile-img.jpg" class="img-fluid rounded" alt="Profile photo of Minseo KIM">
+          </div>
+          <div class="col-lg-8 content">
+            <h2>About Me</h2>
+            <p>
+              I’m currently taking a Script Programming course and learning the fundamentals of web development with HTML, CSS, and JavaScript. Through my studies, I’m exploring how interactive web pages are structured and how small scripts can make interfaces more dynamic and user-friendly. I enjoy experimenting with layouts, animations, and responsive design while gaining hands-on experience in problem solving. My next goal is to build simple yet effective projects that combine creativity with clean code and to deepen my understanding of front-end development.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End About Section -->
+
+    <!-- ======= Resume Section ======= -->
+    <section id="resume" class="section light-background">
+      <div class="container" data-aos="fade-up">
+        <h2 class="mb-4">Resume</h2>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>KNU in Computer Engineering</h4>
+              <h5>2023 – Present</h5>
+              <p><em>Vilnius Gediminas Technical University (VILNIUS TECH), Vilnius, Lithuania</em></p>
+              <p>Coursework: Script Programming, Web Programming (HTML/CSS/JS)</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <h3 class="resume-title">Experience</h3>
+            <div class="resume-item">
+              <h4>Front-end Intern</h4>
+              <h5>Summer 2024</h5>
+              <p><em>ABC Studio</em></p>
+              <p>Implemented responsive pages and improved Lighthouse performance by 18%.</p>
+            </div>
+            <div class="resume-item">
+              <h4>Freelance Web Designer</h4>
+              <h5>2023 – 2024</h5>
+              <p>Designed and shipped personal sites for students and clubs using Bootstrap.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Resume Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="section">
+      <div class="container" data-aos="fade-up">
+        <h2 class="mb-4">Portfolio</h2>
+
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="portfolio-item">
+              <a href="assets/img/portfolio-1.jpg" class="glightbox" data-gallery="portfolio">
+                <img src="assets/img/logo.webp" class="img-fluid" alt="Responsive landing page project">
+              </a>
+              <h5 class="mt-2">Responsive Landing</h5>
+              <p>Bootstrap 5 layout with AOS animations.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="portfolio-item">
+              <a href="assets/img/portfolio-2.jpg" class="glightbox" data-gallery="portfolio">
+                <img src="assets/img/hero-bg.jpg" class="img-fluid" alt="Dashboard UI project">
+              </a>
+              <h5 class="mt-2">Dashboard UI</h5>
+              <p>Cards, charts, and filters with vanilla JS.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="portfolio-item">
+              <a href="assets/img/portfolio-3.jpg" class="glightbox" data-gallery="portfolio">
+                <img src="assets/img/apple-touch-icon.png" class="img-fluid" alt="Personal blog theme project">
+              </a>
+              <h5 class="mt-2">Blog Theme</h5>
+              <p>Accessible typography and dark mode.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Portfolio Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="section light-background">
+      <div class="container" data-aos="fade-up">
+        <h2 class="mb-4">Services</h2>
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item p-4 rounded shadow-sm h-100">
+              <i class="bi bi-code-slash fs-1 text-primary"></i>
+              <h4 class="mt-3">Web Development</h4>
+              <p>I create responsive, accessible, and optimized websites using HTML, CSS, and JavaScript.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item p-4 rounded shadow-sm h-100">
+              <i class="bi bi-brush fs-1 text-primary"></i>
+              <h4 class="mt-3">UI/UX Design</h4>
+              <p>Designing clean, consistent interfaces with Figma and usability testing principles.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item p-4 rounded shadow-sm h-100">
+              <i class="bi bi-bar-chart-line fs-1 text-primary"></i>
+              <h4 class="mt-3">Data Visualization</h4>
+              <p>Creating charts and dashboards with D3.js and Chart.js for better data insight.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video -->
+        <div class="mt-5">
+          <h3>My Work in Action</h3>
+          <video controls width="640" class="rounded shadow-sm">
+            <source src="assets/media/demo-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <!-- YouTube Embed -->
+        <div class="mt-4">
+          <h3>Featured Project Video</h3>
+          <iframe width="640" height="360"
+            src="https://www.youtube.com/embed/moySHN3PlLQ"
+            title="YouTube video player"
+            style="border:0;"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy"></iframe>
+        </div>
+
+        <!-- Audio -->
+        <div class="mt-4">
+          <h3>Project Soundtrack</h3>
+          <audio controls>
+            <source src="assets/media/soft-background-music-432715.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+
+      </div>
+    </section>
 
   </main>
+  <!-- End Main -->
 
+  <!-- ======= Footer ======= -->
   <footer id="footer" class="footer dark-background">
     <div class="container">
       <h3 class="sitename">Personal</h3>
-      <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
+      <p>Simple, clean, and responsive — built for personal presentation.</p>
       <div class="social-links d-flex justify-content-center">
-        <a href=""><i class="bi bi-twitter-x"></i></a>
-        <a href=""><i class="bi bi-facebook"></i></a>
-        <a href=""><i class="bi bi-instagram"></i></a>
-        <a href=""><i class="bi bi-skype"></i></a>
-        <a href=""><i class="bi bi-linkedin"></i></a>
+        <a href="#"><i class="bi bi-twitter-x"></i></a>
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-linkedin"></i></a>
       </div>
       <div class="container">
         <div class="copyright">
           <span>Copyright</span> <strong class="px-1 sitename">Personal</strong> <span>All Rights Reserved</span>
         </div>
         <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you've purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
           Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
         </div>
       </div>
     </div>
   </footer>
+  <!-- End Footer -->
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
 
   <!-- Preloader -->
   <div id="preloader"></div>
@@ -149,5 +284,4 @@
   <script src="assets/js/main.js"></script>
 
 </body>
-
 </html>
