@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Replicate</title>
+<style>
+  :root{
+    --panel:#bfe9f6;
+    --chip:#ffffff; 
+    --text:#1f2937;
+  }
+
+  * { box-sizing: border-box; }
+
+  body{
+    margin:0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji;
+    color:var(--text);
+    background:#f4f6f8;
+  }
+
+  .wrap{
+    max-width: 980px;
+    margin: 48px auto;
+    padding: 0 24px;
+  }
+
+  h1{
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 0 0 24px;
+  }
+
+  /* 큰 파란 패널 */
+  .panel{
+    background: var(--panel);
+    border-radius: 8px;
+    padding: 56px 72px;
+    box-shadow: 0 12px 24px rgba(0,0,0,.06);
+  }
+
+  /* 두 열 레이아웃 */
+  .cols{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* 스크린샷처럼 가운데가 넓게 벌어지도록 column-gap을 크게 */
+    column-gap: clamp(80px, 14vw, 180px);
+    justify-items: start;
+  }
+
+  .col{
+    display: grid;
+    row-gap: 18px;
+  }
+
+  .chip{
+    background: var(--chip);
+    border-radius: 6px;
+    padding: 10px 16px;
+    line-height: 1.2;
+    box-shadow: 0 2px 0 rgba(0,0,0,.05), 0 0 0 1px rgba(0,0,0,.04) inset;
+    font-size: 16px;
+    min-width: 86px;  
+    text-align: left;
+  }
+
+  @media (max-width: 560px){
+    .panel{ padding: 36px 24px; }
+    .cols{ grid-template-columns: 1fr; row-gap: 20px; }
+  }
+</style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>Replicate</h1>
+
+    <section class="panel" aria-label="number chips">
+      <div class="cols">
+        <div class="col" aria-label="left column">
+          <div class="chip">Seven</div>
+          <div class="chip">Eight</div>
+          <div class="chip">Nine</div>
+          <div class="chip">Ten</div>
+          <div class="chip">Eleven</div>
+        </div>
+
+        <div class="col" aria-label="right column">
+          <div class="chip">One</div>
+          <div class="chip">Two</div>
+          <div class="chip">Three</div>
+          <div class="chip">Four</div>
+          <div class="chip">Five</div>
+          <div class="chip">Six</div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
