@@ -1,0 +1,349 @@
+/* =========================================================
+   custom.css — Your overrides for the Bootstrap template
+   - Do NOT edit vendor/template CSS files.
+   - Link this file LAST in <head>.
+   ========================================================= */
+
+/* ------------------------------
+   0) Base tokens & resets
+   ------------------------------ */
+:root{
+  /* Fonts */
+  --font-sans: "Poppins", "Roboto", system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+
+  /* Type scale */
+  --fs-900: clamp(2.5rem, 1.5rem + 2.5vw, 3.5rem);
+  --fs-800: clamp(2rem, 1.2rem + 2vw, 2.75rem);
+  --fs-700: 1.75rem;
+  --fs-600: 1.5rem;
+  --fs-500: 1.25rem;
+  --fs-400: 1rem;
+
+  /* Line heights & tracking */
+  --lh-tight: 1.15;
+  --lh-snug: 1.3;
+  --lh-normal: 1.6;
+  --tracking-tight: -0.015em;
+  --tracking-wide: 0.02em;
+
+  /* Brand & surfaces */
+  --brand-600:#3e63ff;  /* main */
+  --brand-700:#2345f0;  /* hover/active */
+  --ink:#222;           /* body text */
+  --ink-dim:#4b5563;    /* secondary text */
+  --bg:#ffffff;         /* card/bg */
+  --ring-shadow: 0 0 0 3px rgba(59,130,246,.35);
+
+  /* Spacing scale */
+  --space-1:.25rem;
+  --space-2:.5rem;
+  --space-3:1rem;
+  --space-4:1.5rem;
+  --space-5:2rem;
+  --space-6:3rem;
+
+  /* Radius & shadows */
+  --radius:.9rem;
+  --radius-lg:1.25rem;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,.06);
+  --shadow-md: 0 8px 24px rgba(0,0,0,.08);
+}
+
+html{ scroll-behavior: smooth; }
+body{
+  font-family: var(--font-sans);
+  font-size: var(--fs-400);
+  line-height: var(--lh-normal);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+img{ max-width:100%; height:auto; }
+
+/* Respect users who prefer less motion */
+@media (prefers-reduced-motion: reduce){
+  *{ animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}
+
+/* ------------------------------
+   1) Typography system (h1–h6, p)
+   ------------------------------ */
+h1,h2,h3,h4,h5,h6{
+  font-weight:700;
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--lh-tight);
+  margin: 0 0 .5em;
+  color: black; /* high contrast headings */
+}
+h1{ font-size: var(--fs-900); }
+h2{ font-size: var(--fs-800); }
+h3{ font-size: var(--fs-700); }
+h4{ font-size: var(--fs-600); }
+h5{ font-size: var(--fs-500); }
+h6{
+  font-size: .95rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+p{ margin: 0 0 1rem; color: var(--ink); letter-spacing: 0; }
+.lead{ font-size: var(--fs-500); line-height: var(--lh-snug); color: var(--ink-dim); }
+small,.text-small{ font-size: .875rem; line-height: var(--lh-snug); letter-spacing: var(--tracking-wide); }
+
+/* ------------------------------
+   2) Interactive elements
+      Links & Buttons (default/hover/active/focus)
+   ------------------------------ */
+
+/* Links */
+a{
+  color: var(--brand-600);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color .15s ease;
+}
+a:hover{ color: var(--brand-700); }
+a:active{ color:#122c9c; }
+a:focus-visible{
+  outline: none;
+  box-shadow: var(--ring-shadow);
+  border-radius: .5rem;
+}
+
+/* Buttons (Bootstrap friendly) */
+.btn{
+  border: none;
+  font-weight:600;
+  border-radius: .75rem;
+  transition: background-color .15s ease, transform .08s ease, box-shadow .15s ease;
+}
+.btn:focus-visible{
+  outline: none;
+  box-shadow: var(--ring-shadow);
+}
+.btn:active{ transform: translateY(1px); }
+
+/* Primary */
+.btn-primary{
+  background: var(--brand-600);
+  color:#fff;
+}
+.btn-primary:hover{ background: var(--brand-700); }
+.btn-primary:active{ background: #1b34c9; }
+
+/* Outline variants keep strong contrast */
+.btn-outline-primary{
+  border: 2px solid var(--brand-600) !important;
+  color: var(--brand-600);
+  background: transparent;
+}
+.btn-outline-primary:hover{
+  color:#fff;
+  background: var(--brand-600);
+}
+
+/* Badges/tags example (if used) */
+.badge{
+  border-radius: .5rem;
+  padding: .4em .6em;
+  font-weight:600;
+}
+
+/* ------------------------------
+   3) Spacing scale & surfaces
+      Apply to at least three sections/cards
+   ------------------------------ */
+.section-padding{ padding-block: var(--space-6); }
+.section-padding-sm{ padding-block: var(--space-4); }
+
+.card-surface{
+  background: var(--bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  padding: var(--space-4);
+}
+
+/* Utilities (optional to drop in HTML) */
+.u-mb-3{ margin-bottom: var(--space-3) !important; }
+.u-mb-5{ margin-bottom: var(--space-5) !important; }
+.u-p-4{ padding: var(--space-4) !important; }
+.u-pt-6{ padding-top: var(--space-6) !important; }
+
+/* Content blocks with soft borders / radius / shadow */
+.block{
+  background: #fff;
+  border: 1px solid #e9eef7;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-4);
+}
+
+/* ------------------------------
+   4) Two components restyled (appearance only)
+      Example: Navbar + Back-to-top
+   ------------------------------ */
+
+/* Navbar (works with most BootstrapMade templates) */
+.navbar, .navbar-dark{
+  background: #0b1026 !important;
+}
+.navbar .navbar-brand{ font-weight:800; letter-spacing:.02em; color:#fff !important; }
+.navbar .nav-link{
+  color:#cfd8ff !important;
+  padding:.5rem 1rem;
+  border-radius:.75rem;
+  transition: background-color .15s ease, color .15s ease;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link.active{
+  background: rgba(255,255,255,.08);
+  color:#fff !important;
+}
+
+/* Back-to-top button (class name used by many templates) */
+.back-to-top{
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  width: 3rem; height: 3rem;
+  display: grid; place-items: center;
+  background: var(--brand-600);
+  color:#fff !important;
+  border-radius: 999px;
+  box-shadow: var(--shadow-md);
+  transition: transform .15s ease, background-color .15s ease, opacity .2s ease;
+}
+.back-to-top:hover{ transform: translateY(-2px); background: var(--brand-700); }
+
+/* If template uses .scroll-top instead */
+.scroll-top{ composes: back-to-top; } /* ignored safely */
+
+/* ------------------------------
+   5) Optional A: Styled lists with pseudo-elements/counters
+   ------------------------------ */
+
+/* Ordered list with counters */
+.ol-counter{ counter-reset: step; list-style: none; padding-left: 0; }
+.ol-counter > li{
+  counter-increment: step;
+  position: relative;
+  padding-left: 2.25rem;
+  margin: .5rem 0;
+}
+.ol-counter > li::before{
+  content: counter(step);
+  position: absolute; left: 0; top: 0;
+  width: 1.75rem; height: 1.75rem;
+  display: grid; place-items: center;
+  background: #eef2ff; color:#233;
+  font-weight: 700; border-radius: .5rem;
+}
+
+/* Unordered list with custom checkmarks */
+.ul-check{ list-style: none; padding-left: 0; }
+.ul-check > li{
+  position: relative;
+  padding-left: 1.5rem;
+  margin: .4rem 0;
+}
+.ul-check > li::before{
+  content: "✓";
+  position: absolute; left: 0; top: 0;
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--brand-700);
+}
+/* One level nested example spacing */
+.ul-check ul, .ol-counter ol{ margin-top:.4rem; margin-bottom:.4rem; padding-left:1.25rem; }
+
+/* ------------------------------
+   6) Optional B: Tables / data blocks enhancement
+   ------------------------------ */
+.table.custom{
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  background: #fff;
+  border-radius: var(--radius);
+  overflow: hidden; /* clip zebra at radius */
+  box-shadow: var(--shadow-sm);
+}
+.table.custom thead th{
+  background: #0b1026;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  font-weight:700;
+  border-bottom: none !important;
+}
+.table.custom th,
+.table.custom td{
+  padding: .875rem 1rem;
+  border-bottom: 1px solid #e9eef7;
+  vertical-align: middle;
+}
+.table.custom tbody tr:nth-child(even){ background: #f8fafc; }
+.table.custom tbody tr:hover{ background: #eef2ff; }
+.table.custom td.num{ text-align: right; font-variant-numeric: tabular-nums; }
+
+/* ------------------------------
+   7) Helper: section IDs often used in templates
+   Apply consistent padding to visible sections
+   ------------------------------ */
+#about, #resume, #portfolio{ padding-block: var(--space-6); }
+#about .container > *, #resume .container > *, #portfolio .container > *{ margin-bottom: var(--space-3); }
+
+/* =========================================================
+   8) FIX: Header logo & navmenu + scroll-top (for this template)
+   ========================================================= */
+
+/* Header logo */
+.header .logo,
+.header .logo:visited{
+  color:#fff !important;
+  text-decoration:none;
+}
+.header .logo .sitename{
+  margin:0;
+  font-weight:800;
+  letter-spacing:.02em;
+  color:#fff !important;
+}
+
+/* Header navmenu */
+.header .navmenu a{
+  color:#cfd8ff !important;
+  text-decoration:none;
+  padding:.5rem 1rem;
+  border-radius:.75rem;
+  transition: background-color .15s ease, color .15s ease;
+}
+.header .navmenu a:hover,
+.header .navmenu a.active{
+  background: rgba(255,255,255,.08);
+  color:#fff !important;
+}
+
+/* Mobile menu toggle icon */
+.header .mobile-nav-toggle{ color:#fff; }
+
+/* Dark sections link color fix */
+.dark-background a{ color:#fff; }
+.dark-background a:hover{ color:#e6eaff; }
+
+/* Scroll-top button fix */
+.scroll-top{
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  width: 3rem; height: 3rem;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--brand-600);
+  color:#fff !important;
+  border-radius: 999px;
+  box-shadow: var(--shadow-md);
+  transition: transform .15s ease, background-color .15s ease, opacity .2s ease;
+}
+.scroll-top:hover{ transform: translateY(-2px); background: var(--brand-700); }
+
+/* End of custom.css */
