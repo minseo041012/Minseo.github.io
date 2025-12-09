@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Queue Management System UI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- 스타일 -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Service Queue Management System</h1>
+    <p class="subtitle">Bank / Hospital / Service Center Queue UI Demo</p>
+  </header>
+
+  <main class="layout">
+    <!-- 1) 고객용: 번호표 발급 키오스크 -->
+    <section class="panel" id="kiosk-panel">
+      <h2>Ticket Kiosk</h2>
+      <p>Select a service to get your ticket.</p>
+
+      <div class="service-buttons">
+        <button class="service-btn" data-service="GENERAL">General Service</button>
+        <button class="service-btn" data-service="PAYMENTS">Payments</button>
+        <button class="service-btn" data-service="CONSULTATION">Consultation</button>
+      </div>
+
+      <div class="ticket-output" id="ticket-output">
+        <p>No ticket issued yet.</p>
+      </div>
+    </section>
+
+    <!-- 2) 고객용: 전광판 -->
+    <section class="panel" id="display-panel">
+      <h2>Now Serving</h2>
+
+      <div class="now-serving">
+        <span class="label">Ticket</span>
+        <span class="value" id="current-ticket">—</span>
+      </div>
+      <div class="now-serving">
+        <span class="label">Counter</span>
+        <span class="value" id="current-counter">—</span>
+      </div>
+
+      <h3>Recent Calls</h3>
+      <ul id="recent-calls" class="recent-list">
+        <!-- JS로 최근 호출 내역 추가 -->
+      </ul>
+    </section>
+
+    <!-- 3) 창구 직원용: 다음 손님 호출 -->
+    <section class="panel" id="operator-panel">
+      <h2>Operator Console</h2>
+
+      <label for="counter-select">Counter Number</label>
+      <select id="counter-select">
+        <option value="1">Counter 1</option>
+        <option value="2">Counter 2</option>
+        <option value="3">Counter 3</option>
+      </select>
+
+      <div class="queue-info">
+        <p>Total waiting: <span id="waiting-count">0</span></p>
+      </div>
+
+      <div class="operator-buttons">
+        <button id="btn-next">Call Next</button>
+        <button id="btn-recall" disabled>Recall Current</button>
+        <button id="btn-finish" disabled>Mark as Finished</button>
+      </div>
+
+      <div class="current-info">
+        <p>Current ticket: <strong id="operator-current-ticket">—</strong></p>
+        <p>Service type: <strong id="operator-current-service">—</strong></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <p>Script Programming – Queue Management System UI Demo</p>
+  </footer>
+
+  <!-- JS 로직 -->
+  <script src="app.js"></script>
+</body>
+</html>
